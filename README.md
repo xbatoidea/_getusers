@@ -30,12 +30,27 @@
 
 ## Запуск
 
-```bash
-python src/bot.py
-```
+1. Создай виртуальное окружение и активируй его:
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate
+   ```
+2. Установи зависимости:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Запусти бота:
+   ```bash
+   python src/bot.py
+   ```
 
 ## Команды
 
 - `/start` — приветствие
-- `/blocked` — список заблокированных пользователей
-- `/unblock <username>` — разблокировать пользователя
+- `/blocked` — список отключенных пользователей AD
+- `/unblock <username>` — разблокировать пользователя в AD
+
+## Примечания
+
+- В `README.md` указаны переменные окружения для подключения к Active Directory.
+- `data/blocked_users.json` не используется теперь, но оставлен как пример локального хранилища.
