@@ -39,10 +39,36 @@
    ```bash
    pip install -r requirements.txt
    ```
-3. Запусти бота:
+3. Установи переменные окружения:
+   ```bash
+   export TG_BOT_TOKEN="токен"
+   export AD_SERVER="ldaps://public-hostname:636"
+   export AD_USER="DOMAIN\\username"
+   export AD_PASSWORD="password"
+   export AD_BASE_DN="DC=example,DC=com"
+   export AD_USE_SSL="true"
+   ```
+4. Запусти бота:
    ```bash
    python src/bot.py
    ```
+
+## Деплой на Railway
+
+1. Создай проект на Railway.
+2. Подключи репозиторий `xbatoidea/_getusers`.
+3. Добавь переменные окружения в Railway:
+   - `TG_BOT_TOKEN`
+   - `AD_SERVER`
+   - `AD_USER`
+   - `AD_PASSWORD`
+   - `AD_BASE_DN`
+   - `AD_USE_SSL`
+4. Укажи `Procfile` в корне:
+   ```text
+   web: python src/bot.py
+   ```
+5. Запусти деплой.
 
 ## Команды
 
